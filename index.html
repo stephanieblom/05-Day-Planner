@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container">
+      <!-- Timeblocks go here -->
+      <div id="12am" class="row calendar">
+        <div class="col-sm-1 hour">12:00 am</div>
+        <input id ="hour0" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="1am" class="row calendar">
+        <div class="col-sm-1 hour">1:00 am</div>
+        <input id ="hour1" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="2am" class="row calendar">
+        <div class="col-sm-1 hour">2:00 am</div>
+        <input id ="hour2" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="3am" class="row calendar">
+        <div class="col-sm-1 hour">3:00 am</div>
+        <input id ="hour3" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="4am" class="row calendar">
+        <div class="col-sm-1 hour">4:00 am</div>
+        <input id ="hour4" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="5am" class="row calendar">
+        <div class="col-sm-1 hour">5:00 am</div>
+        <input id ="hour5" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="6am" class="row calendar">
+        <div class="col-sm-1 hour">6:00 am</div>
+        <input id ="hour6" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="7am" class="row calendar">
+        <div class="col-sm-1 hour">7:00 am</div>
+        <input id ="hour7" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="8am" class="row calendar">
+        <div class="col-sm-1 hour">8:00 am</div>
+        <input id ="hour8" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="9am" class="row calendar">
+        <div class="col-sm-1 hour">9:00 am</div>
+        <input id ="hour9" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="10am" class="row calendar">
+        <div class="col-sm-1 hour">10:00 am</div>
+        <input id ="hour10" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="11am" class="row calendar">
+        <div class="col-sm-1 hour">11:00 am</div>
+        <input id ="hour11" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="12pm" class="row calendar">
+        <div class="col-sm-1 hour">12:00 pm</div>
+        <input id ="hour12" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="1pm" class="row calendar">
+        <div class="col-sm-1 hour">1:00 pm</div>
+        <input id ="hour13" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="2pm" class="row calendar">
+        <div class="col-sm-1 hour">2:00 pm</div>
+        <input id ="hour14" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="3pm" class="row calendar">
+        <div class="col-sm-1 hour">3:00 pm</div>
+        <input id ="hour15" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="4pm" class="row calendar">
+        <div class="col-sm-1 hour">4:00 pm</div>
+        <input id ="hour16" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="5pm" class="row calendar">
+        <div class="col-sm-1 hour">5:00 pm</div>
+        <input id ="hour17" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="6pm" class="row calendar">
+        <div class="col-sm-1 hour">6:00 pm</div>
+        <input id ="hour18" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="7pm" class="row calendar">
+        <div class="col-sm-1 hour">7:00 pm</div>
+        <input id ="hour19" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="8pm" class="row calendar">
+        <div class="col-sm-1 hour">8:00 pm</div>
+        <input id ="hour20" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="9pm" class="row calendar">
+        <div class="col-sm-1 hour">9:00 pm</div>
+        <input id ="hour21" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="10pm" class="row calendar">
+        <div class="col-sm-1 hour">10:00 pm</div>
+        <input id ="hour22" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+      <div id="11pm" class="row calendar">
+        <div class="col-sm-1 hour">11:00 pm</div>
+        <input id ="hour23" class="col-sm-8 timeBlock"></input>
+        <div data-id="1" class="col-sm-1 saveBtn">Save</div>
+      </div>
+    </div>
+
+    <script>
+
+      console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
+      console.log(moment().format('LT'));
+
+      let currentTime = moment().format('LT');
+      
+      let stringHour = 0;
+      let AMPM = currentTime.slice(-2)
+      
+        if(currentTime.charAt(0) == '1'){
+          if(currentTime.charAt(1) == ':'){
+            stringHour = currentTime.charAt(0)
+          } else { stringHour = currentTime.charAt(0) + currentTime.charAt(1) } 
+          
+        } else { stringHour = currentTime.charAt(0) }
+    
+      console.log(`current hour ${currentTime.charAt(0)}`);
+      console.log(`AM or PM: `, AMPM );
+      console.log(stringHour)
+
+      let hour = Number(stringHour);
+
+      //Colour code blocks to show past, present, and future 
+      if(AMPM == "AM"){
+        if(hour == "12"){
+          $(`#hour0`).addClass("present")
+          for( i = 1; i < 24; i++){
+            $(`#hour${i}`).addClass("future");
+          }
+        } else {
+          for( i = 0; i < hour - 1; i++){
+            $(`#hour${i}`).addClass("past");
+          }
+          $(`#hour${hour}`).addClass("present");
+        } 
+      } else {
+        if(hour == "12"){
+          for( i = 0; i < hour - 1; i++){
+            $(`#hour${i}`).addClass("past");
+          }
+        } else {
+          for( i = 0; i < hour+12; i++){
+            $(`#hour${i}`).addClass("past");
+          } 
+          $(`#hour${hour+12}`).addClass("present");
+          for( i = 13; i < hour+12; i++){
+            $(`#hour${i+hour}`).addClass("future");
+          }
+        }
+      }
+      
+      function eventFunction( event ) {
+        event.preventDefault();
+            debugger;
+          
+            var event = event.target.innerText
+
+            console.log(`event is: ${event}`);
+          
+            // Return from function early if submitted todoText is blank
+            if (event === "") {
+              return;
+            }
+      }
+
+      var timeBlock = document.getElementsByClassName("timeBlock");
+
+      for (var i = 0; i < 24; i++) {
+      timeBlock[i].addEventListener("submit", eventFunction, false);
+      }
+
+  
+
+      // addEvent.addEventListener("submit", function(event) {
+      //   event.preventDefault();
+
+      //   var eventText = eventInput.value.trim();
+
+      // });
+
+
+    
+    </script>
+  </body>
+</html>
