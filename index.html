@@ -161,7 +161,7 @@
       let eventList = ["","","","","","","","","","","","","","","","","","","","","","","",""]; 
       let pullEventList = [];
 
-      if (localStorage.eventList == eventList ){
+      if (localStorage.eventList == null ){
         pullEventList = eventList;
       } else{
         pullEventList = JSON.parse( localStorage.eventList );
